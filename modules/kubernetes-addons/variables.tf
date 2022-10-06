@@ -1233,3 +1233,16 @@ variable "nvidia_device_plugin_helm_config" {
   type        = any
   default     = {}
 }
+
+#-----------Robusta ADDON-----------------------
+variable "enable_robusta" {
+  description = "Enable Robusta add-on"
+  type        = bool
+  default     = false
+}
+
+variable "robusta_helm_config" {
+  description = "Robusta Helm Chart config"
+  type        = any
+  default     = {}
+}

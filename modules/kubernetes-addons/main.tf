@@ -639,4 +639,13 @@ module "nvidia_device_plugin" {
   addon_context     = local.addon_context
 }
 
+module "robusta" {
+  source = "./robusta"
+  count  = var.enable_robusta ? 1 : 0
+
+  helm_config       = var.robusta_helm_config
+  manage_via_gitops = var.argocd_manage_add_ons
+  addon_context     = local.addon_context
+}
+
 # whitespace noise
